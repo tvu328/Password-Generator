@@ -42,7 +42,19 @@ var specialCharactersArr = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
 if(lowerCase === true ){
   symbols = symbols + smallArr
-  console.log(symbols)
+  console.log(smallArr)
+}
+if(upperCase === true){
+  symbols = symbols + bigArr
+  console.log(bigArr)
+}
+if(numbers === true){
+  symbols = symbols + numbersArr
+  console.log(numbersArr)
+}
+if(specialCharacters === true){
+  symbols = symbols + specialCharactersArr
+  console.log(specialCharactersArr)
 }
 
 var myStr = 
