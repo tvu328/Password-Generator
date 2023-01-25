@@ -9,6 +9,8 @@ The steps to installing this page required you to have to clone the starter code
 ## Usage
 At the beginning of page, you will be prompted with a big button to generate a password. Clicking that button will present four pop-up prompts that all ask questions considering the characters and types of characters for your random password. 
 
+Deployed link: https://tvu328.github.io/password.generator/
+
 ## Credit
 Tyler Vu
 
