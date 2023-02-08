@@ -1,23 +1,21 @@
-// Assignment code here
 var symbols = ""
 
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword ();
+  console.log(password)
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-  var passwordLength = prompt ("Enter a password of at least 8 characters and no more than 128 characters.");
+  var password = ""
+  var passwordLength = parseInt(prompt ("Enter a password of at least 8 characters and no more than 128 characters."));
 console.log(passwordLength)
 if(passwordLength <8){
   alert('Enter a password of at least 8 characters.')
@@ -42,27 +40,34 @@ var specialCharactersArr = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
 if(lowerCase === true ){
   symbols = symbols + smallArr
+  password += getRandom(smallArr)
   console.log(smallArr)
 }
 if(upperCase === true){
   symbols = symbols + bigArr
+  password += getRandom(bigArr)
   console.log(bigArr)
 }
 if(numbers === true){
   symbols = symbols + numbersArr
+  password += getRandom(numbersArr)
   console.log(numbersArr)
 }
 if(specialCharacters === true){
   symbols = symbols + specialCharactersArr
+  password += getRandom(specialCharactersArr)
   console.log(specialCharactersArr)
 }
+console.log(password)
 
-var myStr = 
-
-function getRandomInt (min, max){
-  return Math.floor(Math.random() * (max - min)) + min;
+for (let i = password.length; i < passwordLength; i++) {
+  password += getRandom(symbols)
 }
 
+return password
 
+}
 
+function getRandom (str){
+  return str[Math.floor(Math.random() * (str.length))];
 }
